@@ -3,6 +3,7 @@ VALORANT Stretched Resolution script, semi-automated
 
 To Do List:
 - [x] Hide "Leave me open!" window
+- [ ] Find VALORANT install automatically
 - [ ] Make it fully automated, change resolution automatically (AHK?)
 
 # Video Tutorial:
