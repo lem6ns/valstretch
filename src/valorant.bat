@@ -28,26 +28,16 @@ pause >NUL
 tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" 2>NUL | find /I /N "VALORANT-Win64">NUL
 if "%ERRORLEVEL%"=="1" START /b "" "%CD:~0,3%Riot Games\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live
 
-MODE CON: COLS=53 LINES=7
+MODE CON: COLS=53 LINES=9
 echo.
 echo      1. Choose fullscreen, choose fill and apply.
 echo             2. Choose windowed, and apply.
 echo                   3. Press any key.
 echo          4. Your game should now be stretched.
+echo.
 echo       Close this window or press CTRL+C to exit.
 
 pause >NUL
 cls
 
-MODE CON: COLS=15 LINES=2
-echo Leave me open!
-START %~dp0utils\QRes.exe /x:%stretchedWidth% /y:%stretchedHeight% /c:32 /r:%stretchedRefreshRate%
-
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force;"%~dp0utils\maximize_and_remove_borders.ps1">NUL
-
-:whileval
-timeout 7 > NUL
-tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" 2>NUL | find /I /N "VALORANT-Win64">NUL
-if "%ERRORLEVEL%"=="0" goto :whileval
-
-START %~dp0utils\QRes.exe /x:%normalWidth% /y:%normalHeight% /c:32 /r:%normalRefreshRate%
+start %~dp0utils\quiet.exe %~dp0utils\resize.bat %stretchedWidth% %stretchedHeight% %stretchedRefreshRate% %normalWidth% %normalHeight% %normalRefreshRate%
