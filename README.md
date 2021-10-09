@@ -1,9 +1,9 @@
-# valorant-stretched-resolution
-VALORANT Stretched Resolution script, semi-automated
+# valstretch
+A VALORANT stretched resolution script, semi-automated
 
 To Do List:
 - [x] Hide "Leave me open!" window
-- [ ] Find VALORANT install automatically
+~~- [ ] Find VALORANT install automatically~~ i am braindead
 - [ ] Make it fully automated, change resolution automatically (AHK?)
 
 # Video Tutorial:
