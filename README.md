@@ -1,9 +1,10 @@
 # valstretch
 A VALORANT stretched resolution script, semi-automated
 
+# **NOTE**: This is bannable.
+
 To Do List:
 - [x] Hide "Leave me open!" window
-~~- [ ] Find VALORANT install automatically~~ i am braindead
 - [ ] Make it fully automated, change resolution automatically (AHK?)
 
 # Video Tutorial:
