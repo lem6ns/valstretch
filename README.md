@@ -1,7 +1,7 @@
 # valstretch
 A VALORANT stretched resolution script, semi-automated
 
-# **NOTE**: This is bannable & patched now.
+# **NOTE**: This may be bannable (but no one has been banned for it afaik)
 
 To Do List:
 - [x] Hide "Leave me open!" window
